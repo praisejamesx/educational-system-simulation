@@ -6,25 +6,24 @@
 A simple Python simulation that models educational system dynamics using capacity ratio analysis. This implementation visualizes how systemic factors (class size, teacher skill, curriculum intensity, time constraints) affect student outcomes through Pygame visualization and Matplotlib analytics. It was created for illustrating my essay: 
 
 
-![Simulation Screenshot](simulation_screenshot.png)
+![Simulation Screenshot](simulation_screenshot.PNG)
 
 ## Mathematical Model
 
-
 The simulation implements a capacity ratio model:
 
-\[
+$$
 CR_i = \frac{r_i}{\frac{C}{T} \times \frac{1}{S} \times P(N)}
-\]
+$$
 
 Where:
-- \( CR_i \): Student \( i \)'s capacity ratio  
-- \( r_i \): Individual learning speed
-- \( C/T \): Curriculum content per time
-- \( S \): Teacher skill (0-1)
-- \( P(N) \): Class size penalty (\( 1 + 0.025(N-1) \))
+- $CR_i$: Student $i$'s capacity ratio  
+- $r_i$: Individual learning speed
+- $C/T$: Curriculum content per time
+- $S$: Teacher skill (0-1)
+- $P(N)$: Class size penalty ($1 + 0.025(N-1)$)
 
-Students pass when \( CR_i \geq 1 \), fail when \( CR_i < 1 \).
+Students pass when $CR_i \geq 1$, fail when $CR_i < 1$.
 
 
 ## System Architecture
