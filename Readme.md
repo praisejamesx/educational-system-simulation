@@ -3,32 +3,40 @@
 
 ## Overview
 
-A simple Python simulation that models educational system dynamics using capacity ratio analysis. This implementation visualizes how systemic factors (class size, teacher skill, curriculum intensity, time constraints) affect student outcomes through Pygame visualization and Matplotlib analytics. It was created for illustrating my essay: 
-
+A Python simulation modeling educational system dynamics using capacity ratio analysis. Visualizes how systemic factors affect student outcomes through Pygame visualization and Matplotlib analytics.
 
 ![Simulation Screenshot](simulation_screenshot.PNG)
 
 ## Mathematical Model
 
-The simulation implements a capacity ratio model:
+### Core Equations
 
 $$
-CR_i = \frac{r_i}{\frac{C}{T} \times \frac{1}{S} \times P(N)}
+\boxed{CR_i = \frac{r_i}{D}} 
+\quad \text{where} \quad 
+\boxed{D = \frac{C}{T} \cdot \frac{1}{S} \cdot \big(1 + 0.025(N-1)\big)}
 $$
 
-Where:
-- $CR_i$: Student $i$'s capacity ratio  
-- $r_i$: Individual learning speed
-- $C/T$: Curriculum content per time
-- $S$: Teacher skill (0-1)
-- $P(N)$: Class size penalty ($1 + 0.025(N-1)$)
+### Statistical Foundation
+
+With $r_i \sim \mathcal{N}(\mu_r, \sigma_r^2)$, the population fail rate is:
+
+$$
+F_{\text{fail}} = \Pr(CR_i < \tau) = \Phi\left(\frac{\tau D - \mu_r}{\sigma_r}\right)
+$$
+
+where $\Phi$ is the standard normal CDF.
+
+**Default Parameters:**
+- $\mu_r = 1.1$, $\sigma_r = 0.25$, $\tau = 1.0$
+- $D \approx 0.95$ → Predicts ~27% initial fail rate
 
 Students pass when $CR_i \geq 1$, fail when $CR_i < 1$.
-
 
 ## System Architecture
 
 ### Core Components
+
 
 ```
 EducationalSystemSimulation
@@ -271,9 +279,10 @@ sim.run()
 
 This simulation is designed for educational and research purposes. Please cite appropriately if used in academic work or publications.
 
-## Buy me a Coffee
+## Support
 
-https://selar.com/showlove/judahx
+Buy me a coffee: https://selar.com/showlove/judahx
+Read my essays: https://crive.substack.com
 
 ---
 
