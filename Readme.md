@@ -1,8 +1,12 @@
 # Educational System Simulation
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
 A simple Python simulation that models educational system dynamics using capacity ratio analysis. This implementation visualizes how systemic factors (class size, teacher skill, curriculum intensity, time constraints) affect student outcomes through Pygame visualization and Matplotlib analytics. It was created for illustrating my essay: 
+
+
+![Simulation Screenshot](simulation_screenshot.png)
 
 ## Mathematical Model
 
@@ -79,11 +83,12 @@ matplotlib>=3.5.0
 
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/praisejamesx/educational-system-simulation.git
+
 cd educational-system-simulation
 
-# Install dependencies
-pip install pygame numpy matplotlib
+# install dependencies
+pip install -r requirements.txt
 
 # Run simulation
 python simulation.py
