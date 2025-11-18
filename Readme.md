@@ -281,8 +281,9 @@ This simulation is designed for educational and research purposes. Please cite a
 
 ## Support
 
-Buy me a coffee: https://selar.com/showlove/judahx
-Read my essays: https://crive.substack.com
+- Buy me a coffee: https://selar.com/showlove/judahx
+
+- Read my essays: https://crive.substack.com
 
 ---
 
